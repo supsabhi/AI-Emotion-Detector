@@ -99,12 +99,6 @@ fun HomeScreen(
                                 activity?.finishAffinity()
                             }
 
-                            AlertAction.OPEN_WIFI_SETTINGS -> {
-                                context.startActivity(
-                                    Intent(Settings.ACTION_WIFI_SETTINGS)
-                                )
-                                activity?.finish()
-                            }
                             AlertAction.OPEN_APP_SETTINGS -> {
                                 context.startActivity(
                                     Intent(

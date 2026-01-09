@@ -7,11 +7,9 @@ import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.bin.emotion_detector.com.bin.emotion_detector.domain.model.EmotionResult
 import com.google.mlkit.vision.common.InputImage
-import com.google.mlkit.vision.face.Face
 import com.google.mlkit.vision.face.FaceDetection
 import com.google.mlkit.vision.face.FaceDetector
 import com.google.mlkit.vision.face.FaceDetectorOptions
-import com.google.mlkit.vision.face.FaceLandmark
 import timber.log.Timber
 
 class FaceAnalyzer(
@@ -46,7 +44,7 @@ class FaceAnalyzer(
         )
 
         detector.process(image)
-            .addOnSuccessListener {faces ->
+            .addOnSuccessListener { faces ->
                 if (faces.isNotEmpty()) {
                     val face = faces.first()
                     val smile = face.smilingProbability ?: 0f
@@ -58,9 +56,11 @@ class FaceAnalyzer(
                     val emotion = when {
                         leftEye < 0.2f && rightEye < 0.2f ->
                             "Eyes Closed 😴"
+
                         (leftEye < 0.2f && rightEye > 0.6f) ||
                                 (rightEye < 0.2f && leftEye > 0.6f) ->
                             "Winking 😉"
+
                         smile > 0.6f -> "Happy 😄"
                         smile > 0.3f -> "Neutral 🙂"
                         smile < 0.15f && eyesAverage in 0.25f..0.6f -> "Sad 😢"
@@ -80,9 +80,7 @@ class FaceAnalyzer(
                             )
                         )
                     }
-                }
-                else
-                {
+                } else {
                     onEmotionDetected(
                         EmotionResult(
                             emotion = "No Face Detected..!!",

@@ -7,9 +7,6 @@ sealed interface HomeScreenAction {
         val granted: Boolean,
         val permanentlyDenied: Boolean
     ) : HomeScreenAction
-    data class InternetStatusChanged(
-        val isInternetOff: Boolean
-    ) : HomeScreenAction
 
 
 }

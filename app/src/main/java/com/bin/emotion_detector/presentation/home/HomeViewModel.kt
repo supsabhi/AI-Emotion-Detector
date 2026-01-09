@@ -24,7 +24,6 @@ class HomeViewModel(
         when (action) {
 
             HomeScreenAction.AlertDismissed -> clearAlert()
-            is HomeScreenAction.InternetStatusChanged -> handleInternetStatus(action)
             is HomeScreenAction.OnPermissionResult -> handlePermission(action)
 
         }
@@ -69,27 +68,9 @@ class HomeViewModel(
     }
 
 
-
     private fun clearAlert() {
         _uiState.update { it.copy(alert = null) }
     }
 
-
-    private fun handleInternetStatus(action: HomeScreenAction.InternetStatusChanged) {
-        _uiState.update {
-            it.copy(
-                internetOff = action.isInternetOff,
-                alert = if (action.isInternetOff) {
-                    AlertState(
-                        title = resourcesProvider.getString(R.string.net_off_title),
-                        message = resourcesProvider.getString(R.string.net_on_msg),
-                        action = AlertAction.OPEN_WIFI_SETTINGS
-                    )
-                } else {
-                    null
-                }
-            )
-        }
-    }
 
 }
