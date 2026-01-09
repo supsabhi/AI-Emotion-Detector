@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">JetPackCompose_template</string>
+    <string name="ok_txt">OK</string>
+    <string name="net_off_title">No Internet</string>
+    <string name="net_on_msg">Please turn ON internet</string>
+    <string name="api_error_title">API Error</string>
+    <string name="api_error_generic_msg">Unable to fetch  data. Please try again later.</string>
+    <string name="countries_txt">Countries</string>
+    <string name="camera_on_msg">Please enable camera permissions</string>
+
+    <string name="permission_required_title">Permission Required</string>
+    <string name="permission_required_msg">Camera permission is required</string>
+    <string name="permission_permanently_denied_msg">Enable Camera permission from settings</string>
 </resources>
