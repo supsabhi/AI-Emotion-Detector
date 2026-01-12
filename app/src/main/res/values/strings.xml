@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JetPackCompose_template</string>
+    <string name="app_name">Emotion Detector</string>
     <string name="ok_txt">OK</string>
     <string name="camera_on_msg">Please enable camera permissions</string>
 

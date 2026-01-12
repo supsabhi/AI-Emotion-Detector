@@ -19,6 +19,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -96,8 +97,6 @@ dependencies {
 
     implementation (libs.face.detection)
     implementation(libs.timber)
-
-
     implementation(libs.google.auth.library.oauth2.http)
 
     implementation(libs.androidx.material3)

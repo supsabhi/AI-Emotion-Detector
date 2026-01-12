@@ -28,6 +28,7 @@ navigationFragmentKtx = "2.8.7"
 kotlinxCoroutinesAndroid = "1.8.1"
 material = "1.12.0"
 activity = "1.10.1"
+tasksVision = "0.10.29"
 timber = "5.0.1"
 
 
@@ -44,6 +45,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+tasks-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "tasksVision" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
@@ -51,12 +53,10 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientSerialization" }
-ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktorClientCio" }
 ktor-client-logging-jvm = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "ktorClientSerialization" }
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
 kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlinSerialization" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
-kotlinx-serialization-json-v163 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
 google-auth-library-oauth2-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleAuthLibraryOauth2Http" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
